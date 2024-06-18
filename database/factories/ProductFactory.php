@@ -24,7 +24,7 @@ class ProductFactory extends Factory
             'category_id' => Category::factory(),
             'name' => fake()->word(),
             'slug'=> fake()->slug(),
-            'description' => fake()->text(100),
+            'description' => fake()->text(1000),
             'is_featured' => fake()->boolean()
         ];
     }
