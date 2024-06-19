@@ -2,6 +2,8 @@
 
 ## Setup
 
+### From scratch
+
 Setup default project:
 ```bash
 curl -s "https://laravel.build/example-app" | bash
@@ -21,6 +23,18 @@ Create alias ():
 ```bash
 cd olw-5
 alias sail='./vendor/bin/sail'
+```
+
+### Cloned repo
+
+Install composer deps (including Sail):
+```bash
+docker run --rm \
+    -u "$(id -u):$(id -g)" \
+    -v "$(pwd):/var/www/html" \
+    -w /var/www/html \
+    laravelsail/php82-composer:latest \
+    composer install --ignore-platform-reqs
 ```
 
 Initialize containers:
